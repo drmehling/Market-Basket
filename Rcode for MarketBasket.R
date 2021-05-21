@@ -57,6 +57,13 @@ OOD <- read.transactions('C:/Users/dmehling/Documents/R/OnlineOrdersMarketBasket
 # Min Support as 0.001, confidence as 0.8.
 basket.rules <- apriori(OOD, parameter = list(supp=0.001, conf=0.8,maxlen=10))
 
+                    
+##-------------------------------------------------------------------------
+##Error in as.data.frame.default(x[[i]], optional = TRUE) : 
+  ##cannot coerce class ‘structure("rules", package = "arules")’ to a data.frame
+##In addition: Warning message:
+  ##In write.csv(basket.rules, "C:/Users/dmehling/Documents/R/OnlineOrdersMarketBasketRULES.csv",  :
+                 ##attempt to set 'sep' ignored
 ## Write rules to CSV file
 write.csv(basket.rules, "C:/Users/dmehling/Documents/R/OnlineOrdersMarketBasketRULES.csv",  sep = ",")
 
