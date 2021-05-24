@@ -7,6 +7,7 @@ library(ggplot2)
 library(lubridate)
 library(plyr)
 library(dplyr)
+library(writexl)
 
 #This is to pull the data into R
 OnlineOrders <- read_excel("C:/Users/dmehling/Documents/R/Online Orders.xlsx")
